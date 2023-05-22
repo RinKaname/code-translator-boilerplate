@@ -1,5 +1,5 @@
 // Importing the necessary constants and components
-import {languages} from '@/constants/languages';
+import { languages } from '@/constants/language';
 import Select from 'react-select'
 
 // Defining the LanguageSelect component and passing in props
