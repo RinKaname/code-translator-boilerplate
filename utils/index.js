@@ -68,14 +68,14 @@ export const OpenAIStream = async (inputLanguage, outputLanguage, inputCode) => 
   const res = await fetch(`https://api.openai.com/v1/chat/completions`, {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer ${key || process.env.OPENAI_API_KEY}`
     },
     method: 'POST',
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
       messages: [system],
       temperature: 0,
-      stream:true,
+      stream: true,
     }),
   });
 }

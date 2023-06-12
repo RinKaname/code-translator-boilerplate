@@ -3,6 +3,7 @@ import CodeWindow from '@/components/CodeWindow';
 import background from '@/public/background.jpg';
 import twitter_image from '@/public/twitter.png';
 import Image from 'next/image';
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [inputCode, setInputCode] = useState(``);
@@ -13,6 +14,7 @@ export default function Home() {
     setInputLanguage(option.value)
     setInputCode('')
     setOutputCode('')
+
   }
   const handleOutputLanguageChange = (option) => {
     setOutputLanguage(option.value)
@@ -20,6 +22,7 @@ export default function Home() {
   }
   const handleTranslate = async () => {
     const maxCodeLength = 6000;
+    
 // Validation checks before starting translation
 if (inputLanguage === outputLanguage) {
   alert('Please select different languages.');
